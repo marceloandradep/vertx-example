@@ -5,11 +5,13 @@ import com.pismo.vertxexample.vertx.mysql.MySqlVerticle
 import groovy.util.logging.Slf4j
 import io.vertx.reactivex.core.Vertx
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.context.annotation.Profile
 import org.springframework.stereotype.Component
 
 import javax.annotation.PostConstruct
 
 @Component
+@Profile('!test')
 @Slf4j
 class VertxStartup {
 

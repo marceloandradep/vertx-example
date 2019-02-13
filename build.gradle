@@ -43,5 +43,16 @@ dependencies {
     )
     testCompile(
             'junit:junit:4.12',
+            'org.spockframework:spock-core:1.2-groovy-2.4',
+            'org.springframework.boot:spring-boot-starter-test:2.0.1.RELEASE',
+            'org.springframework:spring-jdbc:5.1.1.RELEASE',
+            'com.ninja-squad:DbSetup:2.1.0',
+            'org.assertj:assertj-db:1.1.1',
+            'br.com.six2six:fixture-factory:3.1.0',
+            'org.mariadb.jdbc:mariadb-java-client:2.0.1',
+            'org.apache.httpcomponents:httpclient:4.5.6'
     )
+    testCompile('org.mock-server:mockserver-netty:5.4.1') {
+        exclude group: 'io.netty'
+    }
 }
