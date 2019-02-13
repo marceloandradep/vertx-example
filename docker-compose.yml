@@ -1,0 +1,13 @@
+version: '2'
+services:
+  mysql:
+    image: vertxdb
+    tmpfs:
+      - /var/lib/mysql:rw
+    environment:
+      - MYSQL_ROOT_PASSWORD=pismo
+      - MYSQL_USER=pismo
+      - MYSQL_PASSWORD=pismo
+      - MYSQL_DATABASE=pismolabs
+    ports:
+      - "3306:3306"

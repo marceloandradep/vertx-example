@@ -1,0 +1,17 @@
+.classpath
+.project
+.gradle
+.settings/
+build/
+bin/
+out/
+node_modules/
+api_docs/
+apidoc/
+*.log
+.idea
+*.iml
+rebel.xml
+api_docs/
+**/.DS_Store
+.DS_Store

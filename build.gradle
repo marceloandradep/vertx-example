@@ -1,0 +1,47 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.5.RELEASE")
+    }
+}
+
+apply plugin: 'groovy'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+bootJar {
+    baseName = 'app'
+}
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile(
+            'org.codehaus.groovy:groovy-all:2.4.15',
+            'org.springframework.boot:spring-boot-starter',
+            'org.springframework:spring-web',
+            'com.fasterxml.jackson.core:jackson-databind',
+
+            // vert.x
+            'io.vertx:vertx-core:3.5.4',
+            'io.vertx:vertx-rx-java2:3.5.4',
+            'io.vertx:vertx-web:3.5.4',
+            'io.vertx:vertx-mysql-postgresql-client:3.5.4',
+            'io.vertx:vertx-web-api-contract:3.5.4',
+            'io.vertx:vertx-web-client:3.5.4',
+
+            // rxjava
+            'io.reactivex.rxjava2:rxjava:2.2.2'
+    )
+    testCompile(
+            'junit:junit:4.12',
+    )
+}
